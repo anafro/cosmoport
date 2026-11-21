@@ -23,3 +23,17 @@ rules:                              # define list of routing rules
         domain:  img.anafro.com
         static:  ~/images           # or deliver files instead!
 ```
+
+## Installation
+
+* Clone the repo `git clone https://github.com/anafro/cosmoport ./cosmoport-webserver`
+* Open folder `cd ./cosmoport-webserver`
+* Edit the config `sudo nano cosmoport.yaml`
+* Run it! `go run cmd`
+
+## License
+MIT
+
+
+----
+© Anatoly Frolov 2026.
