@@ -8,7 +8,7 @@ type ErrMalformedConfigFile struct {
 	Cause error
 }
 
-func NewMalformedConfigFile(path string, cause error) *ErrMalformedConfigFile {
+func NewErrMalformedConfigFile(path string, cause error) *ErrMalformedConfigFile {
 	return &ErrMalformedConfigFile{
 		Path:  path,
 		Cause: cause,

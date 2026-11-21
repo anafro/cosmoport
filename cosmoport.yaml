@@ -1,13 +1,10 @@
 rules:
     todo:
-        https:   lets-encrypt
         domain:  todo.anafro.com
         backend: 3000
     calculator:
-        https:   lets-encrypt
         domain:  calc.anafro.com
         backend: 3001
     images:
-        https:   lets-encrypt
         domain:  img.anafro.com
         static:  ~/images

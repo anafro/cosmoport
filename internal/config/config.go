@@ -42,7 +42,7 @@ func Load(path string) (*Config, error) {
 	err = yaml.Unmarshal(contentsBytes, config)
 
 	if err != nil {
-		return nil, errors.NewMalformedConfigFile(path, err)
+		return nil, errors.NewErrMalformedConfigFile(path, err)
 	}
 
 	return config, nil

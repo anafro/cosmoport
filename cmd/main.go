@@ -1,17 +1,20 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/anafro/cosmoport/internal/config"
 	"github.com/anafro/cosmoport/internal/server"
+	"github.com/anafro/cosmoport/internal/support"
 )
 
 func main() {
-	conf, err := config.Load("./cosmoport.yaml")
-
-	if err != nil {
-		panic(err)
-	}
-
+	conf := support.Panics(config.Load("./cosmoport.yaml"))
 	serv := server.NewServer(conf)
-	_ = serv // TODO
+
+	go serv.Start()
+
+	for {
+		fmt.Printf(<-serv.Logs)
+	}
 }
